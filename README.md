@@ -1,4 +1,4 @@
-# BlueStaq Elevator Control System
+# Elevator Take Home
 
 A Java-based elevator controller simulator that implements a basic LOOK scheduling algorithm for request handling. The LOOK scheudling alogrithm essentially means "hey I’m going to LOOK in one direction and keep moving that way, serving all requests that also want to go that direction. I’ll only turn around once there are no more requests in my current direction.”
 
