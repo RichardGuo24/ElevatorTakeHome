@@ -25,7 +25,7 @@ The system consists of five core components, each with a single, clear responsib
 - Distinguishes between two request types:
   - **Hall Calls**: Requests from passengers waiting on specific floors (UP or DOWN direction)
   - **Car Calls**: Requests from passengers inside the elevator (destination floors)
-- Uses TreeSet for fast lookups—even with many requests, the system stays responsive
+- Uses TreeSet for fast lookups. Even with many requests, the system stays responsive
 
 **3. Controller.java** – Decision Engine & Orchestrator
 - Implements the core control logic that makes moment-to-moment decisions about elevator movement
@@ -43,7 +43,7 @@ The system consists of five core components, each with a single, clear responsib
 
 ## How It Works
 
-The elevator operates using a **discrete time-step simulation model** (like a game engine). Each iteration represents one unit of time:
+The elevator operates using a **discrete time-step simulation model**. Each iteration represents one unit of time:
 
 1. **Door Management** – If doors are currently open, count down the dwell timer. When it expires, automatically close the doors and prepare for movement
 2. **Stop Decision** – Analyze pending requests and determine if the elevator should stop at the current floor to pick up or drop off passengers
@@ -99,7 +99,7 @@ The demo creates a scenario with hall calls at floors 3 (UP) and 8 (DOWN), then 
 ## Future Enhancements
 
 To extend this system for production use, consider:
-1. Adding a REST API layer for external request submission
+1. Allow external programs to send elevator requests, such as during simulation testing or when connecting to a separate user interface.
 2. Implementing multi-elevator support with intelligent scheduling
 3. Adding real-time simulation with configurable floor transition times
 4. Integrating persistence for audit logs and statistics
